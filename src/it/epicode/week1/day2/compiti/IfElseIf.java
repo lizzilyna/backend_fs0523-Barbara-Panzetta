@@ -9,17 +9,18 @@ public class IfElseIf {
         String x =scanner.nextLine();
 
      pariDispari(x);
+        System.out.println(true?"pari":"dispari");
 
         }
 
-public static String pariDispari (String y){
-        if (y.length() % 2 == 0){
-        System.out.println("La parola contiene un numero pari di caratteri.");
-    }else {
-        System.out.println("La parola contiene un numero dispari di caratteri.");
+public static boolean pariDispari (String y){
+        if (y.length() % 2 == 0){return true;
+
+    }else {return false;
+
     }
 
-    return y;
+
 }
 
     }

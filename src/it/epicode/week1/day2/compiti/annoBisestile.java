@@ -9,15 +9,16 @@ public class annoBisestile {
         int anno= scanner.nextInt();
 
         annoBisestile(anno);
+        System.out.println(true?"anno bisestile":"anno non bisestile");
     }
 
-    public static int annoBisestile (int year) {
+    public static boolean annoBisestile (int year) {
         if ((year%4==0) || (year%100==0&&year%400==0)) {
-            System.out.println("anno bisestile");}
+            return true;}
 
         else {
-                System.out.println("anno non bisestile");
+                return false;
             }
 
-    return year;
+
 }}
