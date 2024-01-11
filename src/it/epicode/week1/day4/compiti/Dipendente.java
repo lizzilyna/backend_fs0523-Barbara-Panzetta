@@ -59,20 +59,41 @@ public class Dipendente {
         this.dipartimento = dipartimento;
     }
 
-    public static void StampaDatiDipendente(Dipendente datiOperaio)     {
-        System.out.println("Stipendio base: "+datiOperaio.stipendioBase);
-        System.out.println("Matricola: "+datiOperaio.matricola);
-        System.out.println("Stipendio:"+datiOperaio.stipendio);
-        System.out.println("Importo orario straordinario: "+datiOperaio.ImportoOrarioStraordinario);
-        System.out.println("Livello: "+datiOperaio.livello);
-        System.out.println("Dipartimento: "+datiOperaio.dipartimento);
+    public void StampaDatiDipendente()     {
+        System.out.println("Stipendio base: "+stipendioBase);
+        System.out.println("Matricola: "+matricola);
+        System.out.println("Stipendio:"+stipendio);
+        System.out.println("Importo orario straordinario: "+ImportoOrarioStraordinario);
+        System.out.println("Livello: "+livello);
+        System.out.println("Dipartimento: "+dipartimento);
     }
 
+
+
+
     public Livello Promuovi () {
-        if (Livello.OPERAIO == livello) {
-            livello = Livello.OPERAIO;
+        if (Livello.OPERAIO == livello)
+        {
+            livello = Livello.IMPIEGATO;
+            stipendio*=1.2;
             System.out.println("Sei stato promosso a impiegato!");
+        } else if
+        (Livello.IMPIEGATO==livello) {
+            livello = Livello.QUADRO;
+            stipendio *= 1.5;
+            System.out.println("Sei stato promosso a quadro!");
+        } else if
+        (Livello.QUADRO==livello) {
+            livello = Livello.DIRIGENTE;
+            stipendio *= 2;
+            System.out.println("Sei stato promosso a dirigente!");
+        }else
+        {
+            System.out.println("Non ci sono più promozioni");
         }
+
+
+
         return livello;
     }
 
