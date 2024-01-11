@@ -1,17 +1,17 @@
-package it.epicode.week1.day3.compiti;
+/*package it.epicode.week1.day3.compiti;
 
 public class sim {
 
-    private int numero;
+    private String numero;
     private double costo;
     private double credit;
     private String[] registro;
 
 
-    public sim(int numero, double costo, double credit, String[] registro) {
+    public sim(String numero, double costo) {
         this.numero = numero;
         this.costo = costo;
-        this.credit = credit;
+        this.credit = 0.0;
         this.registro = registro;
     }
 
@@ -35,6 +35,17 @@ public class sim {
         this.credit = credit;
     }
 
-    public static void StampaDati () {}
+    public static void StampaDati () {
+        System.out.println("Numero: "+);
+    }
+
+    /*private void addCallToCallsList(int number, double duration) {
+        String callInfo = "Chiamata a " + number + " per " + duration + "minuti";
+        for (int i = callsList.length - 1; i > 0; i--) {
+            callsList[i] = callsList[i - 1];
+        }
+        callsList[0] = callInfo;
+    }
 
 }
+        */
