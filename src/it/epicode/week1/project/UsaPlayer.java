@@ -1,7 +1,17 @@
 package it.epicode.week1.project;
 
+import java.util.Scanner;
+
 public class UsaPlayer {
     public static void main(String[] args) {
+
+
+
+
+
+
+
+
 Audio audio=new Audio("A vuo frnì", 3, 5);
 
     audio.play();
