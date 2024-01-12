@@ -1,6 +1,6 @@
 package it.epicode.week1.project;
 
-abstract class Multimedia {//classe astratta generale, non istanziabile
+abstract class Multimedia {
 protected String titolo;
 protected int durata;
 
