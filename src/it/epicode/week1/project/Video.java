@@ -4,10 +4,12 @@ public class Video extends Multimedia implements Player{
 
 
     private int volume;
+    private int luminosita;
 
-    public Video(String titolo, int durata, int volume) {
+    public Video(String titolo, int durata, int volume, int luminosita) {
         super(titolo, durata);
         this.volume = volume;
+        this.luminosita=luminosita;
     }
 
 
@@ -27,15 +29,36 @@ public class Video extends Multimedia implements Player{
         }
 
     }
-    public void play () {
-        for (int i=0; i<durata; i++) {
-            System.out.print(titolo);
-        for (int j=0; j<volume; j++) {
-            System.out.print("!");
-        }
-        }
+
+            public void play () {
+                for (int i = 0; i < durata; i++) {
+                    System.out.print(titolo);
+                for (int j = 0; j < volume; j++) {
+                     System.out.print("!");}
+                for (int x=0; x<luminosita; x++) {
+                     System.out.print("*");
+                }
+                    System.out.println();
+            }
+
+
 
     }
 
-}
+
+    public void aumentaLuminosita (int luminosita) {
+        if (this.luminosita + luminosita <= 100) {
+            this.luminosita += luminosita;
+        } else {
+            System.out.println("La luminosità è già al massimo!");
+        }
+
+    }
+    public void diminuisciLuminosita (int luminosita) {
+        if (this.luminosita - luminosita>=0 ) {
+            this.luminosita -= luminosita;
+        }else {
+            System.out.println("La luminosità è già al minimo!");
+
+}}}
 
